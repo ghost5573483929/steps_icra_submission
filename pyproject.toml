@@ -1,0 +1,86 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "steps-trajectory-forecasting"
+version = "0.1.0"
+description = "Unified pedestrian trajectory preprocessing, analysis, and forecasting"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "dill==0.4.1",
+  "easydict>=1.13",
+  "einops>=0.8.2",
+  "filelock==3.20.0",
+  "gitpython>=3.1.62",
+  "ijson==3.5.1",
+  "matplotlib==3.11.0",
+  "numpy==2.5.1",
+  "orjson==3.12.0",
+  "pandas==3.0.3",
+  "pillow==12.0.0",
+  "pyarrow==24.0.0",
+  "pykalman==0.10.2",
+  "pyyaml==6.0.3",
+  "scikit-learn==1.7.2",
+  "scipy==1.16.1",
+  "seaborn==0.13.2",
+  "torch==2.9.1",
+  "tqdm==4.68.4",
+  "zstandard==0.24.0",
+]
+
+[dependency-groups]
+dev = [
+  "pytest==9.1.1",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = [
+  "analysis_pipeline",
+  "analysis_trajlets",
+  "area_calibration",
+  "artifact_provenance",
+  "canonical",
+  "categorization",
+  "config",
+  "coverage",
+  "crowd_density",
+  "data",
+  "data_quality",
+  "dataset_paths",
+  "diversity",
+  "duplicate_annotations",
+  "experiments",
+  "forecasting_config",
+  "forecasting_representation",
+  "forecasting_windows",
+  "heading",
+  "manifests",
+  "metrics",
+  "models",
+  "normalization",
+  "opentraj_dataset_stats",
+  "opentraj_indicators",
+  "opentraj_report",
+  "paper_dataset_metrics",
+  "preprocess",
+  "preprocessing_views",
+  "results",
+  "sizing",
+  "split_manifests",
+  "splits",
+  "stats",
+  "visualize",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["baselines*", "datasets_preprocessing*", "paper*", "scripts*"]
+namespaces = true
+
+[tool.setuptools.package-data]
+baselines = ["README.md", "upstream.json"]
+datasets_preprocessing = ["**/*.json", "**/*.md"]

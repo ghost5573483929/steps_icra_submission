@@ -1,0 +1,12 @@
+[submodule "references/moflow"]
+	path = references/moflow
+	url = https://github.com/DSL-Lab/MoFlow.git
+[submodule "references/trajnetplusplustools"]
+	path = references/trajnetplusplustools
+	url = https://github.com/vita-epfl/trajnetplusplustools.git
+[submodule "references/social-gan"]
+	path = references/social-gan
+	url = https://github.com/agrimgupta92/sgan.git
+[submodule "references/social-vae"]
+	path = references/social-vae
+	url = https://github.com/xupei0610/SocialVAE.git

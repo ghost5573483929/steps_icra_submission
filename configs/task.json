@@ -1,0 +1,55 @@
+{
+  "sample": "scene",
+  "sample_hz": 2.5,
+  "canonical_stride": 1,
+  "history_steps": 8,
+  "future_steps": 12,
+  "min_length": 0.0,
+  "w_target": 2.0,
+  "n_target": 100000,
+  "eval_stride": 20,
+  "datasets": {
+    "eth": {
+      "chunk_stride": 1
+    },
+    "ucy": {
+      "chunk_stride": 1
+    },
+    "steps": {
+      "chunk_stride": 1,
+      "pretrain_fractions": [
+        0.05,
+        0.1,
+        0.25,
+        0.5,
+        1.0
+      ]
+    },
+    "madras": {
+      "chunk_stride": 1
+    },
+    "grand_central": {
+      "chunk_stride": 1
+    }
+  },
+  "analysis": {
+    "preprocessing": "opentraj_kalman_smooth",
+    "trajlet_length_s": 4.8,
+    "trajlet_overlap_s": 2.0,
+    "static_threshold_m": 1.0
+  },
+  "publication": {
+    "cv_preprocessing": "opentraj_kalman_smooth"
+  },
+  "forecasting": {
+    "preset": "steps_default"
+  },
+  "input": [
+    "x",
+    "y"
+  ],
+  "target": [
+    "x",
+    "y"
+  ]
+}

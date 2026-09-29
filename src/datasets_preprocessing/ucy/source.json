@@ -1,0 +1,55 @@
+{
+  "dataset": "UCY Crowds-by-Example",
+  "video_hz": 25,
+  "annotation_sampling_frames": 10,
+  "canonical_hz": 2.5,
+  "raw_coordinates": "centered image pixels",
+  "metric_conversion": {
+    "source": "OpenTraj homographies.json",
+    "reference": "crowdbotp/OpenTraj@97ec1d5e1b579f26febeaa9083705952deac338a"
+  },
+  "heading": "derived from canonical metric positions; gaze is retained only as source information",
+  "homography_note": "The raw archives omit H.txt. Light-weight matrices from the pinned OpenTraj release are committed in src/datasets_preprocessing/ucy/homographies.json.",
+  "benchmark_sequences": [
+    "crowds_zara01",
+    "crowds_zara02",
+    "students001",
+    "students003"
+  ],
+  "canonical_recordings": [
+    "crowds_zara01",
+    "crowds_zara02",
+    "students001",
+    "students003"
+  ],
+  "publication_sequences": [
+    "arxiepiskopi1",
+    "crowds_zara01",
+    "crowds_zara02",
+    "crowds_zara03",
+    "students001",
+    "students003",
+    "uni_examples"
+  ],
+  "publication_physical_scenes": [
+    "arxiepiskopi",
+    "zara",
+    "university_students"
+  ],
+  "scene_identity": {
+    "arxiepiskopi1": "arxiepiskopi",
+    "crowds_zara01": "zara1",
+    "crowds_zara02": "zara2",
+    "crowds_zara03": "zara3",
+    "students001": "univ",
+    "students003": "univ",
+    "uni_examples": "univ"
+  },
+  "membership_note": "All seven sequences are canonical and used for publication characterization. canonical_recordings is intentionally the independent four-sequence Social-GAN forecasting benchmark membership.",
+  "area_source": "per-recording occupancy-grid effective area using the scale-free observed-mass rule configured by src/stats.py",
+  "heading_provenance": {
+    "kind": "derived_direction_of_travel",
+    "meaning": "Direction of travel (course-over-ground), not body/sensor orientation.",
+    "computed_from": "central-difference of interpolated canonical x/y (src/heading.py::central_difference_heading), computed after homography projection."
+  }
+}

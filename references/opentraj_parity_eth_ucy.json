@@ -1,0 +1,101 @@
+{
+  "pinned_commit": "97ec1d5e1b579f26febeaa9083705952deac338a",
+  "kalman": {
+    "position_max_abs_error": 0.0,
+    "velocity_max_abs_error": 0.0
+  },
+  "indicators": {
+    "speed_mean": 0.0,
+    "speed_range": 0.0,
+    "acceleration_mean_abs": 0.0,
+    "acceleration_max_abs": 0.0,
+    "path_efficiency_max_abs_error": 0.0,
+    "dca_max_abs_error": 0.0,
+    "ttc_max_abs_error": 0.0,
+    "local_density_max_abs_error": 0.0,
+    "passed": true
+  },
+  "trajlets": [
+    {
+      "recording": "seq_eth",
+      "upstream_candidates": 823,
+      "ours_candidates": 823,
+      "upstream_retained": 770,
+      "ours_retained": 770,
+      "returned_indices_equal": true,
+      "passed": true
+    },
+    {
+      "recording": "seq_hotel",
+      "upstream_candidates": 484,
+      "ours_candidates": 484,
+      "upstream_retained": 324,
+      "ours_retained": 324,
+      "returned_indices_equal": true,
+      "passed": true
+    },
+    {
+      "recording": "arxiepiskopi1",
+      "upstream_candidates": 164,
+      "ours_candidates": 164,
+      "upstream_retained": 163,
+      "ours_retained": 163,
+      "returned_indices_equal": true,
+      "passed": true
+    },
+    {
+      "recording": "crowds_zara01",
+      "upstream_candidates": 520,
+      "ours_candidates": 520,
+      "upstream_retained": 496,
+      "ours_retained": 496,
+      "returned_indices_equal": true,
+      "passed": true
+    },
+    {
+      "recording": "crowds_zara02",
+      "upstream_candidates": 1091,
+      "ours_candidates": 1091,
+      "upstream_retained": 672,
+      "ours_retained": 672,
+      "returned_indices_equal": true,
+      "passed": true
+    },
+    {
+      "recording": "crowds_zara03",
+      "upstream_candidates": 519,
+      "ours_candidates": 519,
+      "upstream_retained": 438,
+      "ours_retained": 438,
+      "returned_indices_equal": true,
+      "passed": true
+    },
+    {
+      "recording": "students001",
+      "upstream_candidates": 2528,
+      "ours_candidates": 2528,
+      "upstream_retained": 1847,
+      "ours_retained": 1847,
+      "returned_indices_equal": true,
+      "passed": true
+    },
+    {
+      "recording": "students003",
+      "upstream_candidates": 1952,
+      "ours_candidates": 1952,
+      "upstream_retained": 1685,
+      "ours_retained": 1685,
+      "returned_indices_equal": true,
+      "passed": true
+    },
+    {
+      "recording": "uni_examples",
+      "upstream_candidates": 222,
+      "ours_candidates": 222,
+      "upstream_retained": 221,
+      "ours_retained": 221,
+      "returned_indices_equal": true,
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "dataset": "eth",
+  "raw_glob": "raw/ewap_dataset*.tgz",
+  "parser": "ewap_obsmat",
+  "fields": {
+    "source_frame": 0,
+    "track_id": 1,
+    "x": 2,
+    "y": 4,
+    "velocity_x": 5,
+    "velocity_y": 7
+  },
+  "annotation_hz": 2.5,
+  "canonical_hz": 2.5,
+  "scene_identity": {
+    "seq_eth": "eth",
+    "seq_hotel": "hotel"
+  },
+  "position_scale_m": 1.0,
+  "position_transform": "identity",
+  "heading": "atan2(velocity_y, velocity_x)",
+  "area_source": "estimated convex hull of converted trajectory points; report 95% trimmed sensitivity",
+  "heading_provenance": {
+    "kind": "derived_direction_of_travel",
+    "meaning": "Direction of travel (course-over-ground), not body/sensor orientation.",
+    "computed_from": "atan2 of source velocity_x/velocity_y (ewap_obsmat columns), converted to canonical steps unchanged."
+  }
+}

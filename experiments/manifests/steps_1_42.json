@@ -1,0 +1,24 @@
+{
+  "dataset": "steps",
+  "fraction": 1.0,
+  "data_seed": 42,
+  "n_tracks": 11,
+  "n_scenes_post_categorization": 122,
+  "track_ids": [
+    "STEPS_08_18_094501:21",
+    "STEPS_08_18_094501:24",
+    "STEPS_08_18_094501:10",
+    "STEPS_08_18_094501:9",
+    "STEPS_08_18_094501:13",
+    "STEPS_08_18_094501:17",
+    "STEPS_08_18_094501:12",
+    "STEPS_08_18_094501:16",
+    "STEPS_08_18_094501:7",
+    "STEPS_08_18_094501:11",
+    "STEPS_08_18_094501:4"
+  ],
+  "config_hash": "sha256:c53b12711b128fd82ab8ef6ab5b51a1b4756318f69ce165a1d4b82aa16840386",
+  "git_commit": "d7f6fc91387a014842fad0dae5ad4c832bd7a937",
+  "git_dirty": true,
+  "created_utc": "2026-09-29T15:35:46.883256Z"
+}

@@ -1,0 +1,18 @@
+# Shared transfer controls. Model-native defaults supply optimizer details not
+# overridden here (SocialVAE: Adam; MoFlow: AdamW + warmup/cosine).
+transfer:
+  pretrain:
+    lr_multiplier: 1.0
+    early_stopping: false
+    reset_optimizer: true
+    reset_scheduler: true
+    train_all_layers: true
+
+  finetune:
+    lr_multiplier: 0.2
+    reset_optimizer: true
+    reset_scheduler: true
+    train_all_layers: true
+    early_stopping: true
+    # Patience remains model-native unless explicitly overridden:
+    # SocialVAE=20, MoFlow=10.

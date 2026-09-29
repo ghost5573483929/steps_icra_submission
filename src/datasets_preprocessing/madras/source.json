@@ -1,0 +1,25 @@
+{
+  "dataset": "madras",
+  "raw_glob": "raw/Data_Madras/{TopView_trajectories,LargeView_trajectories}/*.txt",
+  "parser": "madras_whitespace_trajectory",
+  "fields": {
+    "track_id": "TopView: id_global; LargeView: id",
+    "time": "t/s",
+    "x": "x/m",
+    "y": "y/m",
+    "heading": null
+  },
+  "time_scale_s": 1.0,
+  "position_scale_m": 1.0,
+  "position_transform": "scene_center",
+  "heading": "derive",
+  "canonical_hz": 2.5,
+  "sampling": "TopView 30 Hz and LargeView 10 Hz are phase-aligned and downsampled directly to 2.5 Hz",
+  "excluded": "LargeView_density.txt is a single-frame density snapshot",
+  "area_source": "per-recording occupancy-grid effective area; Geometry.csv contains buildings, fountain, stairs, bollards, and prohibited-area objects, but no camera-footprint boundary that can be matched to each trajectory recording",
+  "heading_provenance": {
+    "kind": "derived_direction_of_travel",
+    "meaning": "Direction of travel (course-over-ground), not body/sensor orientation.",
+    "computed_from": "atan2 of the position delta between each row's neighboring canonical steps (convert.py::_headings)."
+  }
+}

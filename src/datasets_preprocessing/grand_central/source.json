@@ -1,0 +1,20 @@
+{
+  "dataset": "Grand Central Station",
+  "canonical_hz": 2.5,
+  "source_video_hz": 25,
+  "annotation_source": "Manual",
+  "physical_scenes": [
+    "grand_central_station"
+  ],
+  "canonical_recordings": [
+    "grand_central"
+  ],
+  "source_archive_url": "https://www.dropbox.com/s/7y90xsxq0l0yv8d/cvpr2015_pedestrianWalkingPathDataset.rar",
+  "conversion_reference": "crowdbotp/OpenTraj@97ec1d5e1b579f26febeaa9083705952deac338a:toolkit/loaders/loader_gcs.py",
+  "conversion": "split gaps >20 source frames, linearly interpolate every 10 frames, apply pinned homography and 0.8 world scale",
+  "heading_provenance": {
+    "kind": "derived_direction_of_travel",
+    "meaning": "Direction of travel (course-over-ground), not body/sensor orientation.",
+    "computed_from": "central-difference of interpolated canonical x/y (src/heading.py::central_difference_heading), computed after homography projection."
+  }
+}

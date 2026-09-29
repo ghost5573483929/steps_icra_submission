@@ -1,0 +1,15 @@
+{
+  "name": "eth_ucy_five_location_loso",
+  "folds": {
+    "eth": ["seq_eth"],
+    "hotel": ["seq_hotel"],
+    "univ": ["students001", "students003"],
+    "zara1": ["crowds_zara01"],
+    "zara2": ["crowds_zara02"]
+  },
+  "auxiliary_train_recordings": [],
+  "excluded_recordings": ["arxiepiskopi1", "crowds_zara03", "uni_examples"],
+  "default_validation_mode": "none",
+  "validation_policy": "By default all four non-test locations are used for fitting and no validation split is created. Optional grouped validation selects one entire eligible non-test scene_sequence deterministically from data_seed and removes it from training.",
+  "policy": "For each fold, test is the named held-out location and fitting uses the other four benchmark locations. Optional grouped validation can reserve one complete non-test scene_sequence. arxiepiskopi1, crowds_zara03, and uni_examples are canonical UCY sequences that are converted and included in publication/statistics characterization; they are excluded only from this five-fold forecasting benchmark's training, validation, and evaluation."
+}

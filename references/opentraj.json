@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/crowdbotp/OpenTraj.git",
+  "commit": "97ec1d5e1b579f26febeaa9083705952deac338a",
+  "analysis_preprocessing": "opentraj/toolkit/utils/kalman_smoother.py",
+  "trajlet_extraction": "opentraj/toolkit/core/trajlet.py",
+  "license": "MIT"
+}

@@ -1,0 +1,22 @@
+{
+  "social_gan": {
+    "repository": "https://github.com/agrimgupta92/sgan",
+    "commit": "691231e1adb6a344c7bcea9ebf2534518b226ead",
+    "role": "Social GAN preprocessing/data-adapter reference"
+  },
+  "social_vae": {
+    "repository": "https://github.com/xupei0610/SocialVAE",
+    "commit": "eb23cbae562bac2c2dcf0d81529e6ab2ac280962",
+    "role": "SocialVAE feature and augmentation reference"
+  },
+  "trajnetplusplustools": {
+    "repository": "https://github.com/vita-epfl/trajnetplusplustools",
+    "commit": "39d56e0ee64ad85b71584e48819042aecd3ca434",
+    "role": "TrajNet++ categorization/characterization parity reference"
+  },
+  "moflow": {
+    "repository": "https://github.com/DSL-Lab/MoFlow",
+    "commit": "f1b89b0e80ce95646214923e271e3c280d305cfa",
+    "role": "flow matching K=20"
+  }
+}

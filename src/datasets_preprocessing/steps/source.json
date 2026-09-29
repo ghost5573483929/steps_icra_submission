@@ -1,0 +1,35 @@
+{
+  "dataset": "steps",
+  "raw_glob": "raw/**/*_trajectory_data.jsonl",
+  "parser": "steps_fixed_lag_jsonl",
+  "source_hz": 20,
+  "output_hz": 2.5,
+  "canonical_hz": 2.5,
+  "scene_identity": "steps is the physical scene; each bag is a distinct scene_sequence",
+  "fields": {
+    "track_id": "tracked_people[].track_id",
+    "x_y": "tracked_people[].position_ground_xy",
+    "heading": "tracked_people[].yaw_ground_rad"
+  },
+  "trajectory_filter": {
+    "confirmed": true,
+    "observed_this_frame": true,
+    "state_source": "global_kalman_posterior",
+    "excluded_finalization_reason": "end_of_stream_flush"
+  },
+  "position_scale_m": 1.0,
+  "position_transform": "identity",
+  "effective_area_aggregation": "union_across_recordings",
+  "area_source": "estimated from the occupancy-grid union because every recording uses the same fixed indoor scene-global coordinate frame",
+  "excluded_recordings": [
+    "atrium_20260824_120001"
+  ],
+  "excluded_recordings_reason": "atrium_20260824_120001 is the calibration bag reserved for tracking validation. It must not enter any forecasting split; its converted output is retained for provenance only.",
+  "quality_sidecars": "quality/*.quality.parquet and quality/*.frames.parquet",
+  "heading_provenance": {
+    "kind": "measured_sensor_yaw",
+    "meaning": "Measured body/camera orientation, which can differ from direction of travel.",
+    "source": "the tracking system's Kalman-posterior body yaw over ground (`tracked_people[].yaw_ground_rad`), not derived from converted positions."
+  },
+  "layout": "Atrium_Data/MM/DD/STEPS_MM_DD_HHMMSS_trajectory_data.jsonl"
+}

@@ -1,0 +1,10 @@
+{
+  "source": "deterministic scene_sequence grouping",
+  "strategy": "grouped_scene_sequence",
+  "ratios": {
+    "train": 0.8,
+    "val": 0.1,
+    "test": 0.1
+  },
+  "note": "With only two sequences, a three-way ordinary split cannot populate validation; use the separate ETH/UCY LOSO protocol for model evaluation."
+}
